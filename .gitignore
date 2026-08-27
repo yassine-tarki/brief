@@ -1,0 +1,38 @@
+# Exported resumes — regenerate these from index.html rather than committing them
+*.pdf
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+.nfs*
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.\#*
+\#*\#
+
+# Optional tooling people sometimes add on top of this template
+node_modules/
+.cache/
+dist/
+.parcel-cache/
+.env
+.env.local

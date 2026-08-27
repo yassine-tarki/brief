@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Rivera — Senior Backend Engineer</title>
+<meta name="description" content="Resume of Alex Rivera, Senior Backend Engineer specialising in distributed systems, data pipelines and developer platforms.">
+<meta name="author" content="Alex Rivera">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ctext%20y='25'%20font-size='26'%3E%F0%9F%93%84%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- Screen-only toolbar. Hidden in print via .no-print. -->
+<div class="toolbar no-print" role="toolbar" aria-label="Page actions">
+  <div class="toolbar-inner">
+    <span class="toolbar-brand">Brief</span>
+    <div class="toolbar-actions">
+      <button type="button" id="theme-toggle" class="btn btn-ghost" aria-pressed="false">
+        <span aria-hidden="true" id="theme-icon">☾</span>
+        <span id="theme-label">Dark</span>
+      </button>
+      <button type="button" id="print-button" class="btn btn-primary">
+        <span aria-hidden="true">⌘P</span>
+        Save as PDF
+      </button>
+    </div>
+  </div>
+</div>
+
+<main class="page" id="resume">
+
+  <!-- ============ HEADER ============ -->
+  <header class="masthead">
+    <div class="masthead-identity">
+      <h1 class="name">Alex Rivera</h1>
+      <p class="headline">Senior Backend Engineer — Distributed Systems &amp; Developer Platforms</p>
+    </div>
+
+    <address class="contact">
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:alex.rivera@example.com">alex.rivera@example.com</a>
+        </li>
+        <li>
+          <span class="contact-label">Phone</span>
+          <a href="tel:+15035550142">+1 (503) 555-0142</a>
+        </li>
+        <li>
+          <span class="contact-label">Location</span>
+          <span>Portland, OR — open to remote</span>
+        </li>
+        <li>
+          <span class="contact-label">Web</span>
+          <a href="https://alexrivera.example.com">alexrivera.example.com</a>
+        </li>
+        <li>
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/alexrivera">github.com/alexrivera</a>
+        </li>
+        <li>
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/alexrivera">linkedin.com/in/alexrivera</a>
+        </li>
+      </ul>
+    </address>
+  </header>
+
+  <!-- ============ SUMMARY ============ -->
+  <section class="section" id="summary" aria-labelledby="summary-heading">
+    <h2 class="section-heading" id="summary-heading">Summary</h2>
+    <p class="summary-text">
+      Backend engineer with eight years building the services and data plumbing that other teams
+      depend on. I work most comfortably in the layer between product code and infrastructure:
+      event pipelines, internal APIs, deployment tooling and the unglamorous reliability work that
+      keeps them boring. Recent focus on Go and Python services on Kubernetes, with a habit of
+      writing the runbook before the launch. I like small interfaces, explicit failure modes and
+      code reviews that teach something.
+    </p>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience" aria-labelledby="experience-heading">
+    <h2 class="section-heading" id="experience-heading">Experience</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3 class="entry-title">
+          Senior Backend Engineer
+          <span class="entry-org">Northwind Logistics</span>
+        </h3>
+        <p class="entry-meta">
+          <span class="entry-dates"><time datetime="2022-03">Mar 2022</time> – Present</span>
+          <span class="entry-sep" aria-hidden="true">·</span>
+          <span class="entry-place">Portland, OR (Remote)</span>
+        </p>
+      </div>
+      <ul class="bullets">
+        <li>Lead engineer on the shipment tracking platform that ingests carrier webhooks and
+          normalises them into a single event stream consumed by six product teams.</li>
+        <li>Replaced a nightly batch reconciliation job with an incremental streaming pipeline in
+          Go and Kafka, cutting the delay between a carrier scan and a customer-visible update from
+          hours to under a minute.</li>
+        <li>Introduced contract tests between the tracking service and its consumers, which let the
+          team ship schema changes without the coordinated release day that used to precede them.</li>
+        <li>Rewrote the on-call runbooks and added structured logging and trace propagation across
+          the service mesh; paging volume dropped enough that the rotation moved from weekly to
+          fortnightly.</li>
+        <li>Mentor two mid-level engineers, run the weekly design review, and maintain the team's
+          service template repository.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3 class="entry-title">
+          Backend Engineer
+          <span class="entry-org">Cobalt Systems</span>
+        </h3>
+        <p class="entry-meta">
+          <span class="entry-dates"><time datetime="2019-07">Jul 2019</time> – <time datetime="2022-02">Feb 2022</time></span>
+          <span class="entry-sep" aria-hidden="true">·</span>
+          <span class="entry-place">Seattle, WA</span>
+        </p>
+      </div>
+      <ul class="bullets">
+        <li>Built and owned the billing and metering service for a usage-priced B2B analytics
+          product, including idempotent invoice generation and a replayable ledger.</li>
+        <li>Migrated the core Django monolith's async work from ad-hoc cron scripts to Celery with
+          explicit queues and retry policies, making job failures visible instead of silent.</li>
+        <li>Designed the multi-tenant Postgres schema and row-level security policies used by the
+          reporting API, with query plans reviewed for the largest tenants before rollout.</li>
+        <li>Set up the team's first load-testing harness with k6 and used it to size connection
+          pools ahead of two enterprise onboardings.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3 class="entry-title">
+          Software Engineer
+          <span class="entry-org">Basalt Interactive</span>
+        </h3>
+        <p class="entry-meta">
+          <span class="entry-dates"><time datetime="2017-08">Aug 2017</time> – <time datetime="2019-06">Jun 2019</time></span>
+          <span class="entry-sep" aria-hidden="true">·</span>
+          <span class="entry-place">Seattle, WA</span>
+        </p>
+      </div>
+      <ul class="bullets">
+        <li>Full-stack work on a customer-facing scheduling product: Python/Flask services, a
+          Postgres data model, and the React front end that sat on top of them.</li>
+        <li>Took the deployment process from a hand-run shell script to a reproducible CI pipeline
+          with database migrations gated behind review.</li>
+        <li>Wrote the integration test suite that became the release gate, covering the booking,
+          rescheduling and cancellation flows end to end.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects" aria-labelledby="projects-heading">
+    <h2 class="section-heading" id="projects-heading">Selected Projects</h2>
+
+    <article class="entry entry-compact">
+      <div class="entry-head">
+        <h3 class="entry-title">
+          Driftwood
+          <span class="entry-org">Open-source schema migration linter</span>
+        </h3>
+        <p class="entry-meta">
+          <span class="entry-place">Go · Postgres</span>
+        </p>
+      </div>
+      <p class="entry-text">
+        A CLI that reads a pending Postgres migration and flags the statements that take a
+        long-held lock — adding a non-concurrent index, rewriting a table, validating a constraint
+        in place. Runs in CI and explains the safer rewrite rather than just failing the build.
+      </p>
+    </article>
+
+    <article class="entry entry-compact">
+      <div class="entry-head">
+        <h3 class="entry-title">
+          Ledgerbook
+          <span class="entry-org">Double-entry accounting library</span>
+        </h3>
+        <p class="entry-meta">
+          <span class="entry-place">Python · SQLAlchemy</span>
+        </p>
+      </div>
+      <p class="entry-text">
+        A small library for append-only financial ledgers: immutable entries, balanced postings
+        enforced at write time, and point-in-time balance queries. Grew out of the billing work at
+        Cobalt and is now used in two side projects.
+      </p>
+    </article>
+
+    <article class="entry entry-compact">
+      <div class="entry-head">
+        <h3 class="entry-title">
+          Tidepool
+          <span class="entry-org">Local-first Kubernetes dev environment</span>
+        </h3>
+        <p class="entry-meta">
+          <span class="entry-place">Go · Kubernetes · Kind</span>
+        </p>
+      </div>
+      <p class="entry-text">
+        Spins up a team's full service graph on a laptop from one manifest, with hot reload and
+        seeded fixtures, so a new engineer can run the system end to end on their first morning.
+      </p>
+    </article>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills" aria-labelledby="skills-heading">
+    <h2 class="section-heading" id="skills-heading">Skills</h2>
+    <dl class="skills">
+      <div class="skill-row">
+        <dt>Languages</dt>
+        <dd>Go, Python, SQL, TypeScript, Bash</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Backend</dt>
+        <dd>gRPC, REST API design, Kafka, Celery, Django, Flask, FastAPI</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Data</dt>
+        <dd>PostgreSQL, Redis, ClickHouse, schema design, query tuning, migrations</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Infrastructure</dt>
+        <dd>Kubernetes, Docker, Terraform, AWS (EKS, RDS, S3, SQS), GitHub Actions</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Observability</dt>
+        <dd>Prometheus, Grafana, OpenTelemetry, structured logging, SLOs</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Practices</dt>
+        <dd>Design reviews, incident response, contract testing, mentoring, technical writing</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="education" aria-labelledby="education-heading">
+    <h2 class="section-heading" id="education-heading">Education</h2>
+
+    <article class="entry entry-compact">
+      <div class="entry-head">
+        <h3 class="entry-title">
+          B.S. Computer Science
+          <span class="entry-org">Oregon State University</span>
+        </h3>
+        <p class="entry-meta">
+          <span class="entry-dates"><time datetime="2013">2013</time> – <time datetime="2017">2017</time></span>
+          <span class="entry-sep" aria-hidden="true">·</span>
+          <span class="entry-place">Corvallis, OR</span>
+        </p>
+      </div>
+      <p class="entry-text">
+        Coursework in operating systems, databases and distributed computing. Undergraduate teaching
+        assistant for the introductory systems programming course for three terms.
+      </p>
+    </article>
+  </section>
+
+  <footer class="colophon">
+    <p>References available on request.</p>
+  </footer>
+
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  var root = document.documentElement;
+  var STORAGE_KEY = "brief-theme";
+  var toggle = document.getElementById("theme-toggle");
+  var icon = document.getElementById("theme-icon");
+  var label = document.getElementById("theme-label");
+
+  function stored() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+
+  function persist(value) {
+    try { localStorage.setItem(STORAGE_KEY, value); } catch (e) { /* private mode */ }
+  }
+
+  function systemPrefersDark() {
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  function apply(theme) {
+    root.setAttribute("data-theme", theme);
+    var isDark = theme === "dark";
+    toggle.setAttribute("aria-pressed", String(isDark));
+    icon.textContent = isDark ? "☀" : "☾";
+    label.textContent = isDark ? "Light" : "Dark";
+    toggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+  }
+
+  apply(stored() || (systemPrefersDark() ? "dark" : "light"));
+
+  toggle.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    apply(next);
+    persist(next);
+  });
+
+  document.getElementById("print-button").addEventListener("click", function () {
+    window.print();
+  });
+
+  // Cmd/Ctrl+P is handled natively by the browser; no interception needed.
+})();
+</script>
+
+</body>
+</html>
